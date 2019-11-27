@@ -23,10 +23,10 @@ console.log('Server Running ' + port);
  with openSSL
  */
 
-const options = {
-  key: fs.readFileSync('./keys/server.key'),
-  cert: fs.readFileSync('./keys/server.crt')
-}
+// const options = {
+//   key: fs.readFileSync('./keys/server.key'),
+//   cert: fs.readFileSync('./keys/server.crt')
+// }
 
 // var server = https.createServer(options, app);
 var server = http.createServer(app);
