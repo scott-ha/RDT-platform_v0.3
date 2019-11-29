@@ -3912,15 +3912,6 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 .navbar-brand:focus, .navbar-brand:hover {
   text-decoration: none
 }
-/*
-.navbar-nav {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none
-}*/
-/* hn modify for dropdown */
 
 .navbar-nav {
   display: flex;
@@ -9715,6 +9706,11 @@ hr.light {
 .page-section {
   padding: 8rem 0
 }
+/*hn modify for footer*/
+.page-section-footer {
+  padding: 8rem 0;
+  background: rgba(0, 0, 0, .15);
+}
 
 #mainNav {
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
@@ -9754,7 +9750,7 @@ hr.light {
 }
 
 /* EOF */
-
+/* original */
 /* #mainNav .navbar-nav .nav-item .nav-link {
   color: #6c757d;
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
