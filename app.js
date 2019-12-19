@@ -14,9 +14,9 @@ var productRouter = require('./routes/intro/product');
 // function
 var menuRouter = require('./routes/menu');
 var usersRouter = require('./routes/users');
-var loginRouter = require('./routes/login');
-var logoutRouter = require('./routes/logout');
-var regRouter = require('./routes/register');
+// var loginRouter = require('./routes/login');
+// var logoutRouter = require('./routes/logout');
+// var regRouter = require('./routes/register');
 var unregRouter = require('./routes/unregister');
 var walletRouter = require('./routes/wallet');
 var gameRouter = require('./routes/game');
@@ -50,9 +50,9 @@ app.use('/tech', techRouter);
 app.use('/product', productRouter);
 app.use('/menu', menuRouter);
 app.use('/users', usersRouter);
-app.use('/login', loginRouter);
-app.use('/logout', logoutRouter)
-app.use('/reg', regRouter);
+// app.use('/login', loginRouter);
+// app.use('/logout', logoutRouter)
+// app.use('/reg', regRouter);
 app.use('/unreg', unregRouter);
 app.use('/wallet', walletRouter);
 app.use('/game', gameRouter);

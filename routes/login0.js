@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var req_info = require('./req_info');
 
 /* GET home page. */
 // login
@@ -25,16 +26,7 @@ router.post('/', function(req, res) {
   var name = req.body.username;
   var password = req.body.password;
 
-  request.post({
-    url: 'http://localhost:5000/login/rest',
-    headers: {
-      "Content-Type": "application/json"
-    },
-    form: {
-      'username': name,
-      'password': password
-    }
-  }, function(error, response, body) {
+  request.post(req_info.request_to_BS('login/rest', name, password), function(error, response, body) {
     // response data
     var res_data = JSON.parse(body);
     if (!error && response.statusCode == 200) {

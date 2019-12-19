@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+<!--js, css folder remove-->
 <head>
   <title>
     <%= title %>
@@ -11,7 +12,7 @@
 <body>
   <p><%= title %></p>
   <div>
-    <form action="/login" method="POST" enctype="application/x-www-form-urlencoded">
+    <form action="/users/login" method="POST" enctype="application/x-www-form-urlencoded">
       <input type="text" name="username" required="required"/>
       <input type="text" name="password" required="required"/>
       <button type="submit">Login</button>
