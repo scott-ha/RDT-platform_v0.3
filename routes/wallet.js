@@ -28,7 +28,7 @@ router.get('/generate', function(req, res) {
 
   request.get(req_toBS.req_get('wallet/generate/rest'), function(error, response, body) {
     // response data
-    var res_data = JSON.parse(body);
+    res_data = JSON.parse(body);
     if (!error && response.statusCode == 200) {
       if (res_data.rcode == 'ok') {
         console.log("<--- log from : /wallet/generate");
