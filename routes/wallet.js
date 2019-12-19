@@ -1,14 +1,17 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var req_toBS = require('./req_toBS')
 
 /* GET home page. */
 // wallet_generate
 // need to check session
 
+var user_name, session, req_data, res_data, name, password, pri_key, pub_key
+
 router.get('/', function(req, res, next) {
-  var user_name = req.cookies.MY_USER;
-  var session = req.session.logined;
+  user_name = req.cookies.MY_USER;
+  session = req.session.logined;
   if (!session) {
     res.redirect('/')
   } else {
@@ -19,16 +22,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/generate', function(req, res) {
-  var user_name = req.cookies.MY_USER;
-  var name = req.body.username;
-  var password = req.body.password;
+  user_name = req.cookies.MY_USER;
+  name = req.body.username;
+  password = req.body.password;
 
-  request.get({
-    url: 'http://localhost:5000/wallet/generate/rest',
-    headers: {
-      "Content-Type": "application/json"
-    }
-  }, function(error, response, body) {
+  request.get(req_toBS.req_get('wallet/generate/rest'), function(error, response, body) {
     // response data
     var res_data = JSON.parse(body);
     if (!error && response.statusCode == 200) {
@@ -56,24 +54,18 @@ router.get('/generate', function(req, res) {
 });
 
 router.post('/save', function(req, res, next) {
-  var name = req.cookies.MY_USER;
-  var pri_key = req.body.pri_key;
-  console.log('--save');
-  console.log(pri_key);
-  var pub_key = req.body.pub_key;
-  request.post({
-    url: 'http://localhost:5000/wallet/save/rest',
-    headers: {
-      "Content-Type": "application/json"
-    },
-    form: {
-      'user_name': name,
-      'pri_key': pri_key,
-      'pub_key': pub_key
-    }
-  }, function(error, response, body) {
+  name = req.cookies.MY_USER;
+  pri_key = req.body.pri_key;
+  pub_key = req.body.pub_key;
+  req_data = {
+    'user_name': name,
+    'pri_key': pri_key,
+    'pub_key': pub_key
+  }
+
+  request.post(req_toBS.req_post('wallet/save/rest', req_data), function(error, response, body) {
     // res_data in body (rcode,rmessage)
-    var res_data = JSON.parse(body);
+    res_data = JSON.parse(body);
     if (!error && response.statusCode == 200) {
       if (res_data.rcode == 'ok') {
         console.log("<--- log from : /wallet/save");
@@ -96,19 +88,14 @@ router.post('/save', function(req, res, next) {
 });
 
 router.get('/show', function(req, res, next) {
-  var user_name = req.cookies.MY_USER;
+  user_name = req.cookies.MY_USER;
+  req_data = {
+    'username': user_name
+  }
 
-  request.post({
-    url: 'http://localhost:5000/wallet/show/rest',
-    headers: {
-      "Content-Type": "application/json"
-    },
-    form: {
-      'username': user_name
-    }
-  }, function(error, response, body) {
+  request.post(req_toBS.req_post('wallet/show/rest', req_data), function(error, response, body) {
     // res_data in body (rcode,rmessage)
-    var res_data = JSON.parse(body);
+    res_data = JSON.parse(body);
     if (!error && response.statusCode == 200) {
       if (res_data.rcode == 'ok') {
         console.log(res_data);
@@ -133,13 +120,6 @@ router.get('/show', function(req, res, next) {
     }
   })
 
-  // if (req.session.logined == false) {
-  //   res.redirect('/')
-  // } else {
-  //   res.render('wallet_generate', {
-  //     title: 'RDT wallet_generate'
-  //   });
-  // }
 });
 
 

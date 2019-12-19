@@ -151,7 +151,7 @@ router.post('/reg', function(req, res) {
       }
     } else if (error) {
       console.log(error);
-      res.redirect('/reg');
+      res.redirect('/users/reg');
     }
   });
 })
@@ -161,7 +161,7 @@ router.get('/unreg', function(req, res, next) {
   if (!session) {
     res.redirect('/')
   } else {
-    res.render('unregister', { title: 'RealDesignTech' });
+    res.render('users/unregister', { title: 'RealDesignTech' });
   }
 });
 
@@ -177,7 +177,7 @@ router.post('/unreg', function (req, res) {
 
   request.post(req_toBS.req_post('unreg/rest', req_data), function (error, response, body) {
     // res_data in body (rcode,rmessage)
-    var res_data = JSON.parse(body);
+    res_data = JSON.parse(body);
 
     if(!error && response.statusCode == 200) {
       if(res_data.rcode == 'ok') {
@@ -186,7 +186,7 @@ router.post('/unreg', function (req, res) {
 
         // set session logined = false
         // clear cookies
-        res.redirect('/logout');
+        res.redirect('/users/logout');
       } else {
         console.log("<--- log from : /unreg");
         console.log(res_data.rmessage);
