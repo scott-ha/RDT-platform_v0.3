@@ -2,6 +2,8 @@ import { ServerEngine } from 'lance-gg';
 import Wiggle from '../common/Wiggle';
 import Food from '../common/Food';
 
+var xId
+
 export default class WiggleServerEngine extends ServerEngine {
 
     constructor(io, gameEngine, inputOptions) {
@@ -36,6 +38,9 @@ export default class WiggleServerEngine extends ServerEngine {
         player.direction = 0;
         player.bodyLength = this.gameEngine.startBodyLength;
         player.playerId = socket.playerId;
+        //---- kong ----
+        xId = player.playerId;
+        //----
         this.gameEngine.addObjectToWorld(player);
     }
 
@@ -62,7 +67,18 @@ export default class WiggleServerEngine extends ServerEngine {
             return;
 
         this.gameEngine.removeObjectFromWorld(w1);
-        if (w1.AI) this.addAI();
+        //if (w1.AI) this.addAI();
+        //---- kong ----
+        if (w1.AI) {
+            this.addAI();
+        } else {
+            let player = new Wiggle(this.gameEngine, null, { position: this.gameEngine.randPos() });
+            player.direction = 0;
+            player.bodyLength = this.gameEngine.startBodyLength;
+            player.playerId = xId;
+            this.gameEngine.addObjectToWorld(player);
+        }
+        //----
     }
 
     stepLogic() {

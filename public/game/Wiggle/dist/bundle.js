@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 23);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -313,7 +313,7 @@ if (typeof Object.create === 'function') {
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global, process, Buffer) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof2(obj){if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof2=function _typeof2(obj){return typeof obj;};}else{_typeof2=function _typeof2(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof2(obj);}(function(global,factory){( false?"undefined":_typeof2(exports))==='object'&&typeof module!=='undefined'?factory(exports,__webpack_require__(10)): true?!(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports,__webpack_require__(10)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+/* WEBPACK VAR INJECTION */(function(global, process, Buffer) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof2(obj){if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof2=function _typeof2(obj){return typeof obj;};}else{_typeof2=function _typeof2(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof2(obj);}(function(global,factory){( false?"undefined":_typeof2(exports))==='object'&&typeof module!=='undefined'?factory(exports,__webpack_require__(11)): true?!(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports,__webpack_require__(11)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):(global=global||self,factory(global.Client={},global.http));})(this,function(exports,http){'use strict';http=http&&http.hasOwnProperty('default')?http['default']:http;function _typeof(obj){if(typeof Symbol==="function"&&_typeof2(Symbol.iterator)==="symbol"){_typeof=function _typeof(obj){return _typeof2(obj);};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":_typeof2(obj);};}return _typeof(obj);}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}function _createClass(Constructor,protoProps,staticProps){if(protoProps)_defineProperties(Constructor.prototype,protoProps);if(staticProps)_defineProperties(Constructor,staticProps);return Constructor;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function");}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,writable:true,configurable:true}});if(superClass)_setPrototypeOf(subClass,superClass);}function _getPrototypeOf(o){_getPrototypeOf=Object.setPrototypeOf?Object.getPrototypeOf:function _getPrototypeOf(o){return o.__proto__||Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _setPrototypeOf(o,p){_setPrototypeOf=Object.setPrototypeOf||function _setPrototypeOf(o,p){o.__proto__=p;return o;};return _setPrototypeOf(o,p);}function _assertThisInitialized(self){if(self===void 0){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _possibleConstructorReturn(self,call){if(call&&(_typeof2(call)==="object"||typeof call==="function")){return call;}return _assertThisInitialized(self);}function _superPropBase(object,property){while(!Object.prototype.hasOwnProperty.call(object,property)){object=_getPrototypeOf(object);if(object===null)break;}return object;}function _get(target,property,receiver){if(typeof Reflect!=="undefined"&&Reflect.get){_get=Reflect.get;}else{_get=function _get(target,property,receiver){var base=_superPropBase(target,property);if(!base)return;var desc=Object.getOwnPropertyDescriptor(base,property);if(desc.get){return desc.get.call(receiver);}return desc.value;};}return _get(target,property,receiver||target);}/**
@@ -8047,7 +8047,7 @@ dt=t-this.clientEngine.lastStepTime+this.clientEngine.correction;this.clientEngi
 
 var base64 = __webpack_require__(27)
 var ieee754 = __webpack_require__(28)
-var isArray = __webpack_require__(9)
+var isArray = __webpack_require__(10)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -9881,8 +9881,8 @@ var util = __webpack_require__(6);
 util.inherits = __webpack_require__(2);
 /*</replacement>*/
 
-var Readable = __webpack_require__(14);
-var Writable = __webpack_require__(18);
+var Readable = __webpack_require__(15);
+var Writable = __webpack_require__(19);
 
 util.inherits(Duplex, Readable);
 
@@ -10200,6 +10200,106 @@ SafeBuffer.allocUnsafeSlow = function (size) {
 
 /***/ }),
 /* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "socket", function() { return socket; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_query_string__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_query_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_query_string__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lance_gg__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lance_gg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lance_gg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__client_WiggleClientEngine__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_WiggleGameEngine__ = __webpack_require__(49);
+//
+
+
+
+ //---- kong ----
+
+var log;
+var host = "ws://localhost:5331/echo";
+var socket;
+var cnt = 0; //
+
+$(document).ready(function () {
+  function connect() {
+    socket = new WebSocket(host);
+    log = document.getElementById("krlog");
+    log.innerHTML += "socket created = " + socket.readyState + "<br/>";
+    window.W_fr = 0;
+
+    socket.onopen = function () {
+      log.innerHTML += "socket opened = " + socket.readyState + "<br/>";
+      socket.send("hello server");
+    };
+
+    socket.onmessage = function (event) {
+      cnt++;
+      var msg = new String(event.data);
+      log.innerHTML = "RX " + cnt + " = " + msg + "<br/>";
+      var str = msg.split('V');
+
+      if (str[1].length != 9) {
+        return;
+      }
+
+      var val = str[1].split('D');
+
+      if (isNaN(val[0]) || isNaN(val[1])) {
+        return;
+      }
+
+      window.W_speed = parseInt(val[0]);
+      window.W_dir = 19 - parseInt(val[1]);
+      log.innerHTML += "speed: " + window.W_speed + "<br/>";
+      log.innerHTML += "dir: " + window.W_dir + "<br/>";
+      log.innerHTML += "fr: " + window.W_fr + "<br/>";
+    };
+
+    socket.onclose = function () {
+      log.innerHTML += "socket closed = +++++++++++++++++++++++++++++++++++" + socket.readyState + "<br/>";
+      socket.close();
+    };
+
+    socket.onerror = function () {
+      log.innerHTML += "socket error = " + socket.readyState + "<br/>";
+    };
+  }
+
+  $('#krlog').click(function () {
+    connect();
+  });
+});
+$(window).load(function () {
+  $('#krlog').click();
+}); //----
+
+var qsOptions = __WEBPACK_IMPORTED_MODULE_0_query_string___default.a.parse(location.search); // default options, overwritten by query-string options
+// is sent to both game engine and client engine
+
+var defaults = {
+  traceLevel: __WEBPACK_IMPORTED_MODULE_1_lance_gg__["Lib"].Trace.TRACE_NONE,
+  delayInputCount: 5,
+  scheduler: 'render-schedule',
+  syncOptions: {
+    sync: qsOptions.sync || 'extrapolate',
+    localObjBending: 0.8,
+    remoteObjBending: 0.8,
+    bendingIncrements: 6
+  }
+};
+var options = Object.assign(defaults, qsOptions); // create a client engine and a game engine
+
+var gameEngine = new __WEBPACK_IMPORTED_MODULE_3__common_WiggleGameEngine__["a" /* default */](options);
+var clientEngine = new __WEBPACK_IMPORTED_MODULE_2__client_WiggleClientEngine__["a" /* default */](gameEngine, options);
+document.addEventListener('DOMContentLoaded', function (e) {
+  clientEngine.start();
+});
+ //
+
+/***/ }),
+/* 10 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -10210,11 +10310,11 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var ClientRequest = __webpack_require__(29)
-var response = __webpack_require__(12)
+var response = __webpack_require__(13)
 var extend = __webpack_require__(38)
 var statusCodes = __webpack_require__(39)
 var url = __webpack_require__(40)
@@ -10301,7 +10401,7 @@ http.METHODS = [
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableStream)
@@ -10381,12 +10481,12 @@ xhr = null // Help gc
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(process, Buffer, global) {var capability = __webpack_require__(11)
+/* WEBPACK VAR INJECTION */(function(process, Buffer, global) {var capability = __webpack_require__(12)
 var inherits = __webpack_require__(2)
-var stream = __webpack_require__(13)
+var stream = __webpack_require__(14)
 
 var rStates = exports.readyStates = {
 	UNSENT: 0,
@@ -10612,20 +10712,20 @@ IncomingMessage.prototype._onXHRProgress = function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(4).Buffer, __webpack_require__(0)))
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14);
+exports = module.exports = __webpack_require__(15);
 exports.Stream = exports;
 exports.Readable = exports;
-exports.Writable = __webpack_require__(18);
+exports.Writable = __webpack_require__(19);
 exports.Duplex = __webpack_require__(5);
-exports.Transform = __webpack_require__(20);
+exports.Transform = __webpack_require__(21);
 exports.PassThrough = __webpack_require__(36);
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10660,7 +10760,7 @@ var pna = __webpack_require__(7);
 module.exports = Readable;
 
 /*<replacement>*/
-var isArray = __webpack_require__(9);
+var isArray = __webpack_require__(10);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -10670,7 +10770,7 @@ var Duplex;
 Readable.ReadableState = ReadableState;
 
 /*<replacement>*/
-var EE = __webpack_require__(15).EventEmitter;
+var EE = __webpack_require__(16).EventEmitter;
 
 var EElistenerCount = function (emitter, type) {
   return emitter.listeners(type).length;
@@ -10678,7 +10778,7 @@ var EElistenerCount = function (emitter, type) {
 /*</replacement>*/
 
 /*<replacement>*/
-var Stream = __webpack_require__(16);
+var Stream = __webpack_require__(17);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -10710,7 +10810,7 @@ if (debugUtil && debugUtil.debuglog) {
 /*</replacement>*/
 
 var BufferList = __webpack_require__(31);
-var destroyImpl = __webpack_require__(17);
+var destroyImpl = __webpack_require__(18);
 var StringDecoder;
 
 util.inherits(Readable, Stream);
@@ -10800,7 +10900,7 @@ function ReadableState(options, stream) {
   this.decoder = null;
   this.encoding = null;
   if (options.encoding) {
-    if (!StringDecoder) StringDecoder = __webpack_require__(19).StringDecoder;
+    if (!StringDecoder) StringDecoder = __webpack_require__(20).StringDecoder;
     this.decoder = new StringDecoder(options.encoding);
     this.encoding = options.encoding;
   }
@@ -10956,7 +11056,7 @@ Readable.prototype.isPaused = function () {
 
 // backwards compatibility.
 Readable.prototype.setEncoding = function (enc) {
-  if (!StringDecoder) StringDecoder = __webpack_require__(19).StringDecoder;
+  if (!StringDecoder) StringDecoder = __webpack_require__(20).StringDecoder;
   this._readableState.decoder = new StringDecoder(enc);
   this._readableState.encoding = enc;
   return this;
@@ -11651,7 +11751,7 @@ function indexOf(xs, x) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(1)))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12106,14 +12206,14 @@ function unwrapListeners(arr) {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(15).EventEmitter;
+module.exports = __webpack_require__(16).EventEmitter;
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12193,7 +12293,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12274,7 +12374,7 @@ var internalUtil = {
 /*</replacement>*/
 
 /*<replacement>*/
-var Stream = __webpack_require__(16);
+var Stream = __webpack_require__(17);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -12290,7 +12390,7 @@ function _isUint8Array(obj) {
 
 /*</replacement>*/
 
-var destroyImpl = __webpack_require__(17);
+var destroyImpl = __webpack_require__(18);
 
 util.inherits(Writable, Stream);
 
@@ -12887,7 +12987,7 @@ Writable.prototype._destroy = function (err, cb) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(33).setImmediate, __webpack_require__(0)))
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13189,7 +13289,7 @@ function simpleEnd(buf) {
 }
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13409,7 +13509,7 @@ function done(stream, er, data) {
 }
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13491,7 +13591,7 @@ function (_DynamicObject) {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13554,104 +13654,6 @@ function (_DynamicObject) {
 }(__WEBPACK_IMPORTED_MODULE_0_lance_gg__["DynamicObject"]);
 
 
-
-/***/ }),
-/* 23 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_query_string__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_query_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_query_string__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lance_gg__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lance_gg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lance_gg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__client_WiggleClientEngine__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_WiggleGameEngine__ = __webpack_require__(49);
-//
-
-
-
- //---- kong ----
-
-var log;
-var host = "ws://localhost:5331/echo";
-var socket;
-var cnt = 0; //
-
-$(document).ready(function () {
-  function connect() {
-    socket = new WebSocket(host);
-    log = document.getElementById("krlog");
-    log.innerHTML += "socket created = " + socket.readyState + "<br/>";
-    window.W_fr = 0;
-
-    socket.onopen = function () {
-      log.innerHTML += "socket opened = " + socket.readyState + "<br/>";
-      socket.send("hello server");
-    };
-
-    socket.onmessage = function (event) {
-      cnt++;
-      var msg = new String(event.data);
-      log.innerHTML = "RX " + cnt + " = " + msg + "<br/>";
-      var str = msg.split('V');
-
-      if (str[1].length != 9) {
-        return;
-      }
-
-      var val = str[1].split('D');
-
-      if (isNaN(val[0]) || isNaN(val[1])) {
-        return;
-      }
-
-      window.W_speed = parseInt(val[0]);
-      window.W_dir = 14 - parseInt(val[1]);
-      log.innerHTML += "speed: " + window.W_speed + "<br/>";
-      log.innerHTML += "dir: " + window.W_dir + "<br/>";
-      log.innerHTML += "fr: " + window.W_fr + "<br/>";
-    };
-
-    socket.onclose = function () {
-      log.innerHTML += "socket closed = " + socket.readyState + "<br/>";
-      socket.close();
-    };
-
-    socket.onerror = function () {
-      log.innerHTML += "socket error = " + socket.readyState + "<br/>";
-    };
-  }
-
-  $('#krlog').click(function () {
-    connect();
-  });
-});
-$(window).load(function () {
-  $('#krlog').click();
-}); //----
-
-var qsOptions = __WEBPACK_IMPORTED_MODULE_0_query_string___default.a.parse(location.search); // default options, overwritten by query-string options
-// is sent to both game engine and client engine
-
-var defaults = {
-  traceLevel: __WEBPACK_IMPORTED_MODULE_1_lance_gg__["Lib"].Trace.TRACE_NONE,
-  delayInputCount: 5,
-  scheduler: 'render-schedule',
-  syncOptions: {
-    sync: qsOptions.sync || 'extrapolate',
-    localObjBending: 0.8,
-    remoteObjBending: 0.8,
-    bendingIncrements: 6
-  }
-};
-var options = Object.assign(defaults, qsOptions); // create a client engine and a game engine
-
-var gameEngine = new __WEBPACK_IMPORTED_MODULE_3__common_WiggleGameEngine__["a" /* default */](options);
-var clientEngine = new __WEBPACK_IMPORTED_MODULE_2__client_WiggleClientEngine__["a" /* default */](gameEngine, options);
-document.addEventListener('DOMContentLoaded', function (e) {
-  clientEngine.start();
-}); //
 
 /***/ }),
 /* 24 */
@@ -14227,10 +14229,10 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer, global, process) {var capability = __webpack_require__(11)
+/* WEBPACK VAR INJECTION */(function(Buffer, global, process) {var capability = __webpack_require__(12)
 var inherits = __webpack_require__(2)
-var response = __webpack_require__(12)
-var stream = __webpack_require__(13)
+var response = __webpack_require__(13)
+var stream = __webpack_require__(14)
 var toArrayBuffer = __webpack_require__(37)
 
 var IncomingMessage = response.IncomingMessage
@@ -15025,7 +15027,7 @@ function config (name) {
 
 module.exports = PassThrough;
 
-var Transform = __webpack_require__(20);
+var Transform = __webpack_require__(21);
 
 /*<replacement>*/
 var util = __webpack_require__(6);
@@ -16704,6 +16706,7 @@ var objectKeys = Object.keys || function (obj) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lance_gg__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lance_gg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lance_gg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__client_WiggleRenderer__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__client_clientEntryPoint__ = __webpack_require__(9);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -16725,6 +16728,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var WiggleClientEngine =
 /*#__PURE__*/
 function (_ClientEngine) {
@@ -16738,11 +16742,11 @@ function (_ClientEngine) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(WiggleClientEngine).call(this, gameEngine, options, __WEBPACK_IMPORTED_MODULE_1__client_WiggleRenderer__["a" /* default */])); // show try-again button
 
     gameEngine.on('objectDestroyed', function (obj) {
-      if (obj.playerId === gameEngine.playerId) {
-        document.body.classList.add('lostGame');
-        document.querySelector('#tryAgain').disabled = false; //---- kong ----
-
-        window.location.reload(); //----
+      if (obj.playerId === gameEngine.playerId) {//document.body.classList.add('lostGame');
+        //document.querySelector('#tryAgain').disabled = false;
+        //---- kong ----
+        //window.location.reload();
+        //----
       }
     }); // restart game
 
@@ -16837,8 +16841,8 @@ function (_ClientEngine) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WiggleRenderer; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lance_gg__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lance_gg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lance_gg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_Wiggle__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_Food__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_Wiggle__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_Food__ = __webpack_require__(23);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -16957,8 +16961,7 @@ function (_Renderer) {
       this.drawCircle(eye2.x, eye2.y, game.eyeRadius, true);
       ctx.fillStyle = 'white'; // update status
 
-      if (isPlayer) {
-        document.getElementById('wiggle-length').innerHTML = 'Wiggle Length: ' + w.bodyParts.length;
+      if (isPlayer) {//document.getElementById('wiggle-length').innerHTML = 'Wiggle Length: ' + w.bodyParts.length;
       }
     }
   }, {
@@ -17003,8 +17006,8 @@ function (_Renderer) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WiggleGameEngine; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lance_gg__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lance_gg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lance_gg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Wiggle__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Food__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Wiggle__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Food__ = __webpack_require__(23);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }

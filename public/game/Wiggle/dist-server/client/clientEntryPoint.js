@@ -1,5 +1,10 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.socket = void 0;
+
 var _queryString = _interopRequireDefault(require("query-string"));
 
 var _lanceGg = require("lance-gg");
@@ -15,11 +20,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var log;
 var host = "ws://localhost:5331/echo";
 var socket;
+exports.socket = socket;
 var cnt = 0; //
 
 $(document).ready(function () {
   function connect() {
-    socket = new WebSocket(host);
+    exports.socket = socket = new WebSocket(host);
     log = document.getElementById("krlog");
     log.innerHTML += "socket created = " + socket.readyState + "<br/>";
     window.W_fr = 0;
@@ -46,14 +52,14 @@ $(document).ready(function () {
       }
 
       window.W_speed = parseInt(val[0]);
-      window.W_dir = 14 - parseInt(val[1]);
+      window.W_dir = 19 - parseInt(val[1]);
       log.innerHTML += "speed: " + window.W_speed + "<br/>";
       log.innerHTML += "dir: " + window.W_dir + "<br/>";
       log.innerHTML += "fr: " + window.W_fr + "<br/>";
     };
 
     socket.onclose = function () {
-      log.innerHTML += "socket closed = " + socket.readyState + "<br/>";
+      log.innerHTML += "socket closed = +++++++++++++++++++++++++++++++++++" + socket.readyState + "<br/>";
       socket.close();
     };
 

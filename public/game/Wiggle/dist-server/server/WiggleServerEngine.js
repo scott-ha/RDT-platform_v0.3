@@ -35,6 +35,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+var xId;
+
 var WiggleServerEngine =
 /*#__PURE__*/
 function (_ServerEngine) {
@@ -92,7 +94,10 @@ function (_ServerEngine) {
       });
       player.direction = 0;
       player.bodyLength = this.gameEngine.startBodyLength;
-      player.playerId = socket.playerId;
+      player.playerId = socket.playerId; //---- kong ----
+
+      xId = player.playerId; //----
+
       this.gameEngine.addObjectToWorld(player);
     }
   }, {
@@ -122,8 +127,21 @@ function (_ServerEngine) {
     key: "wiggleHitWiggle",
     value: function wiggleHitWiggle(w1, w2) {
       if (!(w2.id in this.gameEngine.world.objects) || !(w1.id in this.gameEngine.world.objects)) return;
-      this.gameEngine.removeObjectFromWorld(w1);
-      if (w1.AI) this.addAI();
+      this.gameEngine.removeObjectFromWorld(w1); //if (w1.AI) this.addAI();
+      //---- kong ----
+
+      if (w1.AI) {
+        this.addAI();
+      } else {
+        var player = new _Wiggle.default(this.gameEngine, null, {
+          position: this.gameEngine.randPos()
+        });
+        player.direction = 0;
+        player.bodyLength = this.gameEngine.startBodyLength;
+        player.playerId = xId;
+        this.gameEngine.addObjectToWorld(player);
+      } //----
+
     }
   }, {
     key: "stepLogic",

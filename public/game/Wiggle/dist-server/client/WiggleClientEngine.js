@@ -9,6 +9,8 @@ var _lanceGg = require("lance-gg");
 
 var _WiggleRenderer = _interopRequireDefault(require("../client/WiggleRenderer"));
 
+var _clientEntryPoint = require("../client/clientEntryPoint");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -42,11 +44,11 @@ function (_ClientEngine) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(WiggleClientEngine).call(this, gameEngine, options, _WiggleRenderer.default)); // show try-again button
 
     gameEngine.on('objectDestroyed', function (obj) {
-      if (obj.playerId === gameEngine.playerId) {
-        document.body.classList.add('lostGame');
-        document.querySelector('#tryAgain').disabled = false; //---- kong ----
-
-        window.location.reload(); //----
+      if (obj.playerId === gameEngine.playerId) {//document.body.classList.add('lostGame');
+        //document.querySelector('#tryAgain').disabled = false;
+        //---- kong ----
+        //window.location.reload();
+        //----
       }
     }); // restart game
 

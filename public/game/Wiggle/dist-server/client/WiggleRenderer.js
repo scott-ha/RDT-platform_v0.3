@@ -128,8 +128,7 @@ function (_Renderer) {
       this.drawCircle(eye2.x, eye2.y, game.eyeRadius, true);
       ctx.fillStyle = 'white'; // update status
 
-      if (isPlayer) {
-        document.getElementById('wiggle-length').innerHTML = 'Wiggle Length: ' + w.bodyParts.length;
+      if (isPlayer) {//document.getElementById('wiggle-length').innerHTML = 'Wiggle Length: ' + w.bodyParts.length;
       }
     }
   }, {

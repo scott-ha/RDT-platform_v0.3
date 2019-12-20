@@ -84,7 +84,7 @@ export default class WiggleRenderer extends Renderer {
 
         // update status
         if (isPlayer) {
-            document.getElementById('wiggle-length').innerHTML = 'Wiggle Length: ' + w.bodyParts.length;
+            //document.getElementById('wiggle-length').innerHTML = 'Wiggle Length: ' + w.bodyParts.length;
         }
     }
 

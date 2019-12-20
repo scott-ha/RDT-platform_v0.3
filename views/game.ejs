@@ -15,16 +15,32 @@
       <button type="submit">Login</button>
     </form>
     <!-- <a href="javascript:runProgram()">Run program</a> -->
-    <a href="webrun:C:\\pika.exe">Go</a>
+    <a href="/game/ava">Avabranch</a>
+    <a href="/game/wiggle">Wiggle</a>
+    <a href="/game/1942">1942</a>
+    <a href="/game/RacerJS">Racer</a>
   </div>
 </body>
 <script>
-console.log(window.location.pathname);
-function runProgram() {
-  var shell = new ActiveXObject("test5.exe");
-  var file = "\\"C:\\pika.exe" ";
-  shell.Run(file)
+var exec = require('child_process');
+var cmd_Avabranch = "PORT=40007 node public/game/Wiggle/dist-server/main.js";
+
+function start_wiggle() {
+  exec(cmd_Avabranch, function (error, stdout, stderr) {
+    console.log('stdout:', stdout);
+    console.log('stderr:', stderr);
+    if (error !== null) {
+     console.log('exec error:', error);
+    }
+  })
 }
+// hn for next version
+// console.log(window.location.pathname);
+// function runProgram() {
+//   var shell = new ActiveXObject("test5.exe");
+//   var file = "\\"C:\\pika.exe" ";
+//   shell.Run(file)
+// }
 </script>
 
 </html>
