@@ -7658,6 +7658,11 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
   margin-top: 3rem !important
 }
 
+.mt-intro {
+  margin-left: 30%;
+  margin-top: 30% !important
+}
+
 .mr-5, .mx-5 {
   margin-right: 3rem !important
 }
@@ -7735,7 +7740,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .pt-3, .py-3 {
-  padding-top: 1rem !important
+  padding-top: 0.7rem !important
 }
 
 .pr-3, .px-3 {
@@ -7743,7 +7748,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .pb-3, .py-3 {
-  padding-bottom: 1rem !important
+  padding-bottom: 0.7rem !important
 }
 
 .pl-3, .px-3 {
@@ -9714,10 +9719,67 @@ hr.light {
   border: none;
   border-radius: 10rem
 }
-
 .page-section {
   padding: 8rem 0
 }
+/* header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 72px);
+  background: url(../img/bg-masthead.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  z-index: 2000
+} */
+#myVideo {
+  position: absolute;
+  object-fit: fill;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+
+#Video-front-img {
+  position: absolute;
+  /* object-fit: fill; */
+  width: auto;
+  height: 100%;
+  z-index: 20;
+}
+
+#ultiraver-intro1 {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%
+}
+
+.page-section-video {
+  height: 100%;
+  /* padding-bottom: calc(- 72px); */
+}
+
+.page-section-intro {
+  padding: 2rem 0;
+  width: 100%;
+  height: 50vh;
+  background-image: url(../img/1_Home/02_Section2-Intro/001_Background.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-section-extra-intro {
+  padding: 2rem 0;
+  width: 100%;
+  height: 50vh;
+  background-image: url(../img/1_Home/02_Section2-Intro/001_Background.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /*hn modify for footer*/
 .page-section-footer {
   padding: 8rem 0;
@@ -9726,7 +9788,7 @@ hr.light {
 
 #mainNav {
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, .7);
   transition: background-color .2s ease
 }
 
@@ -9739,9 +9801,10 @@ hr.light {
 
 #mainNav .navbar-nav .nav-item .nav-link{
   color: #6c757d;
+
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  font-size: .9rem;
+  font-size: 1.0rem;
   padding: .75rem 0
 }
 
@@ -9781,8 +9844,8 @@ hr.light {
 
 @media (min-width:992px) {
   #mainNav {
-    box-shadow: none;
-    background-color: transparent
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, .5)
   }
 
   #mainNav .navbar-brand {
@@ -9794,12 +9857,12 @@ hr.light {
   }
 
   #mainNav .navbar-nav .nav-item .nav-link {
-    color: rgba(255, 255, 255, .7);
+    color: rgba(255, 255, 255, 1);
     padding: 0 1rem
   }
 
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fff
+    color: rgba(255, 255, 255, 0.7)
   }
 
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
@@ -9808,7 +9871,7 @@ hr.light {
 
   #mainNav.navbar-scrolled {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-    background-color: #000000
+    background-color: rgba(0, 0, 0, .5)
   }
 
   #mainNav.navbar-scrolled .navbar-brand {
@@ -9820,11 +9883,11 @@ hr.light {
   }
 
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link {
-    color: #212529
+    color: rgba(255, 255, 255, 1)
   }
 
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
-    color: #f4623a
+    color: rgba(255, 255, 255, 0.7)
   }
 }
 
@@ -9835,27 +9898,11 @@ header.masthead {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: cover
+  background-size: cover;
 }
-/* header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 72px);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, .8) 0, rgba(92, 77, 66, .8) 100%), url(../img/bg-masthead.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover
-} */
 
 header.masthead h1 {
   font-size: 2.25rem
-}
-
-#myVideo {
-  position: absolute;
-  object-fit: fill;
-  width: 100%;
-  height: 100vh;
 }
 
 @media (min-width:992px) {
