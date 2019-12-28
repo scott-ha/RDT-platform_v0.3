@@ -6174,14 +6174,15 @@ a.close.disabled {
 }
 
 .bg-primary-intro {
-  background-image: url("../img/1_Home/02_Section2-intro/001_Background.png")
-  background-position: center left;
+  background-image: url("../img/1_Home/02_Section2-Intro/001_Background.png");
+  background-position: center left
   !important
 }
 
 .bg-primary-why {
   background-image: url("../img/1_Home/04_Section4-Why/001_Background.png");
-  background-position: left bottom;
+  background-position: left bottom
+  !important
 }
 
 a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover {
