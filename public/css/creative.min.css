@@ -524,6 +524,7 @@ pre code {
   margin-left: auto
 }
 
+
 @media (min-width:576px) {
   .container {
     max-width: 540px
@@ -6168,18 +6169,20 @@ a.close.disabled {
  /* HN center right ? left? */
 .bg-primary {
   background-image: url("../img/1_Home/001_Background.png");
-  background-position: center left;
   background-repeat: no-repeat;
   background-size: cover
   !important
 }
 
-.bg-primary-why {
-  background-image: url("../img/1_Home/001_Background.png");
+.bg-primary-intro {
+  background-image: url("../img/1_Home/02_Section2-intro/001_Background.png")
   background-position: center left;
-  background-repeat: no-repeat;
-  background-size: cover
   !important
+}
+
+.bg-primary-why {
+  background-image: url("../img/1_Home/04_Section4-Why/001_Background.png");
+  background-position: left bottom;
 }
 
 a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover {
@@ -9590,6 +9593,10 @@ a.text-dark:focus, a.text-dark:hover {
   color: rgba(0, 114, 185, 1) !important
 }
 
+.text-gray {
+  color: #6c757d !important
+}
+
 .text-rdtbody {
   color: rgba(0, 0, 0, .9) !important
 }
@@ -9761,6 +9768,31 @@ hr.light {
   padding: 8rem 0
 }
 
+.page-section-rdt-60 {
+  padding: 2rem 0;
+  width: 100%;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-section-rdt-70 {
+  padding: 2rem 0;
+  width: 100%;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-section-rdt-100 {
+  padding: 2rem 0;
+  width: 100%;
+  height: 100vh;
+  background-position: left left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .page-section-extra-info {
   padding: 2rem 0
 }
@@ -9788,6 +9820,31 @@ hr.light {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.bg-indoor-cycling {
+  background-position: left top;
+  background-image: url(../img/3_About-RDT/02_Section2-Indoor-Cycling/001_Background.png);
+}
+
+.bg-startup {
+  background-position: right top;
+  background-image: url(../img/3_About-RDT/04_Section4-Tech-based-Startup/001_Background.png);
+}
+
+.bg-made-in-SK {
+  background-position: left top;
+  background-image: url(../img/3_About-RDT/05_Section5-Made-in-The-South-Korea/001_Background.png);
+}
+
+.page-section-tech-based-startup {
+  padding: 2rem 0;
+  width: 100%;
+  height: 100vh;
+  /* background-image: url(../img/1_Home/02_Section2-Intro/001_Background.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 .page-section-contact {
@@ -9937,6 +9994,16 @@ header.masthead {
   background-size: cover;
 }
 
+header.about_rdtbg {
+  background: url(../img/3_About-RDT/01_Section1-About/001_Background.png);
+  /* padding-top: 10rem;
+  padding-bottom: calc(10rem - 72px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover; */
+}
+
 header.masthead h1 {
   font-size: 2.25rem
 }
@@ -9949,10 +10016,13 @@ header.masthead h1 {
     padding-bottom: 0
   }
 
-  header.masthead p {
+  /* header.masthead p {
     font-size: 1.15rem
-  }
+  } */
 
+  header.masthead p {
+    font-size: 1.5rem
+  }
   header.masthead h1 {
     font-size: 3rem
   }
