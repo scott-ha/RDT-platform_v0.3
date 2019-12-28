@@ -9836,7 +9836,7 @@ hr.light {
 /* hn modify for dropdown*/
 
 #mainNav .navbar-nav .nav-item .nav-link{
-  color: #6c757d;
+  color: #fff;
 
   font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 900;
@@ -9871,11 +9871,11 @@ hr.light {
 } */
 
 #mainNav .navbar-nav .nav-item .nav-link:active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #f4623a
+  color: #6c757d;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #f4623a !important
+  color: #6c757d; !important
 }
 
 @media (min-width:992px) {
