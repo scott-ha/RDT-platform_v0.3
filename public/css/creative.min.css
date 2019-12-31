@@ -458,10 +458,10 @@ hr {
   height: auto
 }
 
-@media (max-width:576px) {
-  .img-nav {
+@media (min-width:576px) {
+  .logo-nav {
     max-width: 100%;
-    width: 300px;
+    width: 250px;
     height: auto
   }
 }
