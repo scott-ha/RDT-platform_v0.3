@@ -458,6 +458,12 @@ hr {
   height: auto
 }
 
+.img-contact {
+  max-width: 100%;
+  width: 200px;
+  height: auto
+}
+
 @media (max-width:576px) {
   .logo-nav {
     max-width: 100%;
@@ -2311,8 +2317,21 @@ a.btn.disabled, fieldset:disabled a.btn {
   pointer-events: none
 }
 
+.btn-xl {
+  padding: 1.25rem 2.25rem;
+  font-size: .85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem
+}
+
 .btn-rdt {
+  font-size: 1.25rem;
+  padding: 0.7rem 2.25rem;
+  font-weight: 900;
   color: #fff;
+  border-radius: 10rem;
   background-color: rgba(0, 114, 185, 1);
   border-color: rgba(0, 114, 185, 1)
 }
@@ -6189,7 +6208,8 @@ a.close.disabled {
 
 .bg-primary-intro {
   background-image: url("../img/1_Home/02_Section2-Intro/001_Background.png");
-  background-position: center left !important
+  background-position: center left;
+  background-size: cover !important
 }
 
 .bg-primary-why {
@@ -9794,7 +9814,7 @@ hr.light {
   width: 100%;
   height: 70vh;
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 .page-section-rdt-100 {
@@ -9836,8 +9856,9 @@ hr.light {
 }
 
 .bg-indoor-cycling {
-  background-position: left top;
+  background-position: left center;
   background-image: url(../img/3_About-RDT/02_Section2-Indoor-Cycling/001_Background.png);
+  /* background-size: contain; */
 }
 
 .bg-startup {
@@ -10087,6 +10108,11 @@ header.masthead h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption {
   opacity: 1
 }
+
+.bg-rdtblue-o9 {
+  background-color: rgba(0, 114, 185, 0.9) !important
+}
+
 
 /* hn */
 /* hn fa-icon */
