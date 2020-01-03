@@ -81,6 +81,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem
 }
 
+.contact-inline {
+  display: inline;
+  color: #fff;
+  font-size: 24px;
+  margin-left: 8px !important
+  /* margin-top: 20px; */
+}
+
 p {
   margin-top: 0;
   margin-bottom: 1rem
@@ -459,9 +467,8 @@ hr {
 }
 
 .img-contact {
-  max-width: 100%;
-  width: 200px;
-  height: auto
+  width: 48px;
+  height: 48px
 }
 
 @media (max-width:576px) {
@@ -6208,13 +6215,13 @@ a.close.disabled {
 
 .bg-primary-intro {
   background-image: url("../img/1_Home/02_Section2-Intro/001_Background.png");
-  background-position: center left;
+  background-position: center center;
   background-size: cover !important
 }
 
 .bg-primary-why {
   background-image: url("../img/1_Home/04_Section4-Why/001_Background.png");
-  background-position: left bottom !important
+  background-position: center center !important
 }
 
 a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover {
@@ -7699,6 +7706,10 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
   margin-bottom: 1.5rem !important
 }
 
+.mb-4px, .my-4px {
+  margin-bottom: 2rem !important
+}
+
 .ml-4, .mx-4 {
   margin-left: 1.5rem !important
 }
@@ -7826,6 +7837,10 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 
 .pl-4, .px-4 {
   padding-left: 1.5rem !important
+}
+/* 2px */
+.pl-4px, .px-4px {
+  padding-left: 2rem !important
 }
 
 .p-5 {
@@ -9812,7 +9827,7 @@ hr.light {
 .page-section-rdt-70 {
   padding: 2rem 0;
   width: 100%;
-  height: 70vh;
+  height: auto;
   background-repeat: no-repeat;
   /* background-size: cover; */
 }
@@ -9856,19 +9871,21 @@ hr.light {
 }
 
 .bg-indoor-cycling {
-  background-position: left center;
+  background-position: right top;
   background-image: url(../img/3_About-RDT/02_Section2-Indoor-Cycling/001_Background.png);
-  /* background-size: contain; */
+  background-size: cover;
 }
 
 .bg-startup {
-  background-position: right top;
+  background-position: left top;
   background-image: url(../img/3_About-RDT/04_Section4-Tech-based-Startup/001_Background.png);
+  background-size: cover;
 }
 
 .bg-made-in-SK {
-  background-position: left top;
+  background-position: right top;
   background-image: url(../img/3_About-RDT/05_Section5-Made-in-The-South-Korea/001_Background.png);
+  background-size: cover;
 }
 
 .page-section-tech-based-startup {
@@ -9889,6 +9906,14 @@ hr.light {
 .page-section-footer {
   padding: 2rem 0;
   background: rgba(0, 0, 0, .9);
+}
+
+.myVideo {
+  position: absolute;
+  object-fit: fill;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
 }
 
 #myVideo {
@@ -10030,12 +10055,13 @@ header.masthead {
 
 header.about_rdtbg {
   background: url(../img/3_About-RDT/01_Section1-About/001_Background.png);
-  /* padding-top: 10rem;
-  padding-bottom: calc(10rem - 72px);
-  background-position: center;
+  /* object-fit: fill; */
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: cover; */
+  background-size: cover;
 }
 
 header.masthead h1 {
@@ -10118,8 +10144,8 @@ header.masthead h1 {
 /* hn fa-icon */
 .fa {
   padding: 20px;
-  font-size: 30px;
-  width: 50px;
+  font-size: 60px;
+  width: 100px;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
@@ -10128,11 +10154,14 @@ header.masthead h1 {
 .fa:hover {
   opacity: 0.7;
 }
-
-/* .fa-facebook {
-  background: #3B5998;
-  color: white;
-} */
+.fa-facebook {
+  background: #fff;
+  color: rgba(0, 114, 185, 1);
+}
+.fa-instagram {
+  background: #fff;
+  color: rgba(0, 114, 185, 1);
+}
 /* HN tab menu*/
 ul.tabs {
   margin: 0px;
