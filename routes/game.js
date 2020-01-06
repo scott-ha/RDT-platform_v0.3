@@ -28,7 +28,7 @@ var fs = require('fs');
 router.get('/', function(req, res, next) {
 
   res.render('game', {
-    title: 'RDT_game'
+    title: 'RealDesignTech'
   });
 });
 
@@ -73,24 +73,24 @@ router.get('/wiggle', function (req, res, next) {
 });
 
 // 1942
-router.get('/1942', function (req, res, next) {
-  exec(cmd_Wiggle, function (error, stdout, stderr) {
-    console.log('stdout:', stdout);
-    console.log('stderr:', stderr);
-    if (error !== null) {
-     console.log('exec error:', error);
-    }
-    exec(cmd_open_40009, function (error, stdout, stderr) {
-      console.log('stdout:', stdout);
-      console.log('stderr:', stderr);
-      if (error !== null) {
-       console.log('exec error:', error);
-      }
-    });
-  });
-
-  res.redirect('/game')
-});
+// router.get('/1942', function (req, res, next) {
+//   exec(cmd_Wiggle, function (error, stdout, stderr) {
+//     console.log('stdout:', stdout);
+//     console.log('stderr:', stderr);
+//     if (error !== null) {
+//      console.log('exec error:', error);
+//     }
+//     exec(cmd_open_40009, function (error, stdout, stderr) {
+//       console.log('stdout:', stdout);
+//       console.log('stderr:', stderr);
+//       if (error !== null) {
+//        console.log('exec error:', error);
+//       }
+//     });
+//   });
+//
+//   res.redirect('/game')
+// });
 
 // racer
 router.get('/RacerJS', function (req, res, next) {
