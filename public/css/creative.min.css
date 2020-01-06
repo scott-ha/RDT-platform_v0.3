@@ -83,10 +83,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-inline {
   display: inline;
-  color: #fff;
   font-size: 24px;
   margin-left: 8px !important
-  /* margin-top: 20px; */
+    /* margin-top: 20px; */
+}
+
+.contact-inline:hover {
+  color: #6c757d;
+  opacity: 0.7 !important
 }
 
 p {
@@ -163,7 +167,7 @@ a {
 
 a:hover {
   color: #d6370c;
-  text-decoration: underline
+  /* text-decoration: underline */
 }
 
 a:not([href]):not([tabindex]) {
@@ -478,7 +482,6 @@ hr {
     height: auto
   }
 }
-
 
 .img-thumbnail {
   padding: .25rem;
@@ -7838,6 +7841,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 .pl-4, .px-4 {
   padding-left: 1.5rem !important
 }
+
 /* 2px */
 .pl-4px, .px-4px {
   padding-left: 2rem !important
@@ -9990,8 +9994,7 @@ hr.light {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #6c757d;
-   !important
+  color: #6c757d !important
 }
 
 @media (min-width:992px) {
@@ -10139,6 +10142,13 @@ header.masthead h1 {
   background-color: rgba(0, 114, 185, 0.9) !important
 }
 
+.foot-li {
+  color: #fff !important
+}
+
+.foot-li:hover {
+  color: #6c757d !important
+}
 
 /* hn */
 /* hn fa-icon */
@@ -10154,14 +10164,17 @@ header.masthead h1 {
 .fa:hover {
   opacity: 0.7;
 }
+
 .fa-facebook {
   background: #fff;
   color: rgba(0, 114, 185, 1);
 }
+
 .fa-instagram {
   background: #fff;
   color: rgba(0, 114, 185, 1);
 }
+
 /* HN tab menu*/
 ul.tabs {
   margin: 0px;
