@@ -12,12 +12,12 @@ var {exec} = require('child_process');
 // 여기서 할거냐 game의 서버 실행 부분에서 해결할거냐!
 var cmd_Avabranch = "PORT=40007 node public/game/Avabranch/app.js";
 var cmd_Wiggle = "PORT=40008 node public/game/Wiggle/dist-server/main.js";
-var cmd_1942 = "PORT=40009 node public/game/Wiggle/dist-server/main.js";
-var cmd_racer = "PORT=40010 node public/game/Wiggle/dist-server/main.js";
+// var cmd_1942 = "PORT=40009 node public/game/Wiggle/dist-server/main.js";
+// var cmd_racer = "PORT=40010 node public/game/Wiggle/dist-server/main.js";
 var cmd_open_40007 = "open http://localhost:40007"
 var cmd_open_40008 = "open http://localhost:40008"
-var cmd_open_40009 = "open http://localhost:40009"
-var cmd_open_40010 = "open http://localhost:40010"
+// var cmd_open_40009 = "open http://localhost:40009"
+// var cmd_open_40010 = "open http://localhost:40010"
 
 var fs = require('fs');
 // var path = require('path');
