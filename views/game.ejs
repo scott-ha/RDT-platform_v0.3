@@ -2,24 +2,44 @@
 <html>
 
 <head>
-  <title> RDT
-  </title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <% include ./common/head %>
 </head>
 
-<body>
-  <div>
-    <form action="/login" method="POST" enctype="application/x-www-form-urlencoded">
+<body id="page-top">
+  <% include ./common/nav %>
+    <!-- <form action="/login" method="POST" enctype="application/x-www-form-urlencoded">
       <input type="text" name="username" required="required"/>
       <input type="text" name="password" required="required"/>
       <button type="submit">Login</button>
-    </form>
-    <!-- <a href="javascript:runProgram()">Run program</a> -->
-    <a href="/game/ava">Avabranch</a>
-    <a href="/game/wiggle">Wiggle</a>
-    <a href="/game/1942">1942</a>
-    <a href="/game/RacerJS">Racer</a>
-  </div>
+    </form> -->
+    <section class="page-section-rdt-70 bg-indoor-cycling" id="indoor">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-auto"></div>
+          <div class="col-lg-6 col-md-auto mb-5 text-left">
+            <div class="mt-5">
+              <h1 class="text-rdtblue mt-5 mb-4px">Indoor Cycling</h1>
+              <p class="mb-3 text-gray">Indoor Cycling using Roller and Treadmill is becoming active due to Envrionment Pollution, Traffic Congestion, Safety Accidents and Rehabilitation.</p>
+              <p class="mb-3 text-gray">Recently, the front-wheel or front & rear wheel rotating type Devices that use roller, has been introduced.</p>
+              <p class="mb-3 text-gray">But for users, the Device cannot provide full experience of Various Road Surface Conditions, ultimately does not have a complete function as cycling device.</p>
+              <p class="mb-3 text-gray">Roller commonly used, is available for exercise with front wheels fixed, which means that it has a Game-Elements but it cocame difficult to experience a realistic cycling</p>
+              <p class="mb-3 text-gray">Therefore, we found the needs to develop a new type of roller that can put on the users's own cycle and both front and rear wheels live.</p>
+              <p class="mb-0 text-gray">So it can experience the topography and road surface condition of the cycling course.</p>
+              <a href="/game/ava">Avabranch</a>
+              <a href="/game/wiggle">Wiggle</a>
+              <a href="/game/1942">1942</a>
+              <a href="/game/RacerJS">Racer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Contact Section -->
+  <% include ./common/contact %>
+
+  <!-- Footer -->
+  <% include ./common/footer %>
 </body>
 <script>
 var exec = require('child_process');
