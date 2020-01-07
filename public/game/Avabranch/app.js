@@ -2,7 +2,7 @@ var express = require('express')
   , path = require('path');
 
 var app = express();
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 
 app.all('/', function(req, res){
 	res.sendFile(path.join(__dirname, 'views/index.html'));

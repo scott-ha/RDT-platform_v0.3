@@ -10,11 +10,11 @@ var {exec} = require('child_process');
 // command for web launcher
 // game server 실행시 port 충돌 해결필요
 // 여기서 할거냐 game의 서버 실행 부분에서 해결할거냐!
-var cmd_Avabranch = "PORT=40007 node public/game/Avabranch/app.js";
-var cmd_Wiggle = "PORT=40008 node public/game/Wiggle/dist-server/main.js";
+// var cmd_Avabranch = "PORT=40007 node public/game/Avabranch/app.js";
+// var cmd_Wiggle = "PORT=40008 node public/game/Wiggle/dist-server/main.js";
 // var cmd_1942 = "PORT=40009 node public/game/Wiggle/dist-server/main.js";
 // var cmd_racer = "PORT=40010 node public/game/Wiggle/dist-server/main.js";
-var cmd_open_40007 = "open http://localhost:40007"
+var cmd_open_wiggle = "open http://210.102.181.156:40010"
 var cmd_open_40008 = "open http://localhost:40008"
 // var cmd_open_40009 = "open http://localhost:40009"
 // var cmd_open_40010 = "open http://localhost:40010"
@@ -53,7 +53,7 @@ router.get('/ava', function (req, res, next) {
 });
 
 //wiggle
-router.get('/wiggle', function (req, res, next) {
+router.get('/Wiggle', function (req, res, next) {
   exec(cmd_Wiggle, function (error, stdout, stderr) {
     console.log('stdout:', stdout);
     console.log('stderr:', stderr);
