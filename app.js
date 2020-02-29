@@ -8,10 +8,6 @@ var logger = require('morgan');
 // official site
 var indexRouter = require('./routes/index');
 var introRouter = require('./routes/intro')
-var galleryRouter = require('./routes/intro/gallery');
-var companyRouter = require('./routes/intro/company');
-var techRouter = require('./routes/intro/tech');
-var productRouter = require('./routes/intro/product');
 // function
 var menuRouter = require('./routes/menu');
 var usersRouter = require('./routes/users');
@@ -42,10 +38,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/intro', introRouter);
-app.use('/gallery', galleryRouter);
-app.use('/company', companyRouter);
-app.use('/tech', techRouter);
-app.use('/product', productRouter);
 app.use('/menu', menuRouter);
 app.use('/users', usersRouter);
 app.use('/wallet', walletRouter);

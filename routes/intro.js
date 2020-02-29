@@ -30,7 +30,7 @@ router.get('/gallery', function (req, res, next) {
   });
 });
 
-// /intro/gallery
+// /intro/team&partners
 router.get('/team&partners', function (req, res, next) {
   res.render('intro/team&partners', {
     title: 'RealDesignTech'
