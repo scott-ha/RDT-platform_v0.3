@@ -12,19 +12,21 @@
 # limitations under the License.
 
 # [START app_yaml]
-runtime: nodejs10
+runtime:                         nodejs10
+handlers:
+  - url:                         /.*
+    secure:                      always # always https
+    redirect_http_response_code: 301
+    script:                      auto
 
-# instance_class: F2
+# instance_class:                F2
 
 # env_variables:
-#   BUCKET_NAME: "example-gcs-bucket"
+#   BUCKET_NAME:                 "example-gcs-bucket"
 #
-# handlers:
-# - url: /stylesheets
-#   static_dir: stylesheets
+
+# - url:                         /stylesheets
+#   static_dir:                  stylesheets
 #
-# - url: /.*
-#   secure: always
-#   redirect_http_response_code: 301
-#   script: auto
+
 # [END app_yaml]
