@@ -18,8 +18,7 @@ handlers:
     secure:                      always # always https
     redirect_http_response_code: 301
     script:                      auto
-
-# instance_class:                F2
+instance_class:                F4
 
 # env_variables:
 #   BUCKET_NAME:                 "example-gcs-bucket"
