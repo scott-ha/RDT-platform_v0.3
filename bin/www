@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('rdt-platform-v0.1:server');
+var debug = require('debug')('rdt-platform-v0.3:server');
 // var https = require('https');
 var http = require('http');
 var fs = require('fs');
