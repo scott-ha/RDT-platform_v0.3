@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
   </head>
   <body>
     <h1><%= title %></h1>
@@ -17,16 +17,16 @@
   </body>
   <script>
     function MovetoReg() {
-      location.href="/reg"
+      location.href="/users/reg"
     }
     function MovetounReg() {
-      location.href="/unreg"
+      location.href="/users/unreg"
     }
     function MovetoLogin() {
-      location.href="/login"
+      location.href="/users/login"
     }
     function Logout() {
-      location.href="/logout"
+      location.href="/users/logout"
     }
     function MovetoWallet_Generate() {
       location.href="/wallet"
