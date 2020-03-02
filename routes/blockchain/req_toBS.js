@@ -1,7 +1,7 @@
 var request = require('request');
 
 // Blockchain Server
-const url = 'http://localhost:8080/'
+const url = 'http://localhost:8000/'
 
 var req_set = '';
 

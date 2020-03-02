@@ -17,16 +17,16 @@ router.get('/', function(req, res, next) {
     'username': user_name
   }
   if (!session) {
-    res.redirect('/')
+    res.redirect('/menu')
   } else {
-    request.post(req_toBS.req_post('wallet/show/rest', req_data), function (error, response, body) {
+    request.post(req_toBS.req_post('wallet/show/rest', req_data), function(error, response, body) {
       res_data = JSON.parse(body);
       if (!error && response.statusCode == 200) {
         if (res_data.rcode == 'ok') {
           console.log("-pri_key : ", res_data.rpri_key);
           console.log("-pub_key : ", res_data.rpub_key);
 
-          res.render('users/users', {
+          res.render('blockchain/users', {
             title: 'RealDesignTech',
             session: session,
             user_name: user_name,
@@ -36,26 +36,59 @@ router.get('/', function(req, res, next) {
           });
         }
       }
-    }
-  )
-}
+    })
+  }
 });
+
+// /users/addcoin
+// done button / popup!
+router.get('/addcoin', function(req, res) {
+  user_name = req.cookies.MY_USER;
+  session = req.session.logined;
+
+  req_data = {
+    'username': user_name
+  }
+
+  request.post(req_toBS.req_post('blockchain/mine/rest', req_data), function(error, response, body) {
+    // response data
+    res_data = JSON.parse(body);
+    if (!error && response.statusCode == 200) {
+      if (res_data.rcode == 'ok') {
+        res.redirect('/users');
+      } else {
+        console.log("<--- log from : /wallet/generate");
+        console.log("generate failed");
+        res.redirect('/users');
+      }
+    } else if (error) {
+      console.log(error);
+    }
+  })
+});
+
+// transaction ???
 
 // /users/login
 router.get('/login', function(req, res, next) {
+  user_name = req.cookies.MY_USER;
   session = req.session.logined;
 
   if (session) {
-    res.redirect('/')
+    res.redirect('/menu')
   } else {
-    res.render('users/login', {
-      title: 'RealDesignTech'
+    res.render('blockchain/login', {
+      title: 'RealDesignTech',
+      session: session,
+      user_name: user_name
     });
   }
 })
 
 // /users/login
 router.post('/login', function(req, res) {
+  user_name = req.cookies.MY_USER;
+  session = req.session.logined;
   name = req.body.username;
   password = req.body.password;
 
@@ -81,12 +114,14 @@ router.post('/login', function(req, res) {
         res.cookie('MY_USER', name);
         console.log(req.cookies.MY_USER);
         // go to main
-        res.redirect('/');
+        res.redirect('/menu');
       } else {
         console.log("<--- log from : /login");
         console.log("Login failed");
-        res.render('users/login', {
-          title: 'check your ID/PW'
+        res.render('blockchain/login', {
+          title: 'check your ID/PW',
+          session: session,
+          user_name: user_name
         })
       }
     } else if (error) {
@@ -101,7 +136,7 @@ router.get('/logout', function(req, res, next) {
   // session false
   req.session.logined = false;
   // clear cookies
-  res.clearCookie('MY_USER').redirect('/');
+  res.clearCookie('MY_USER').redirect('/menu');
 });
 
 
@@ -109,9 +144,9 @@ router.get('/reg', function(req, res, next) {
   user_name = req.cookies.MY_USER;
   session = req.session.logined;
   if (session) {
-    res.redirect('/')
+    res.redirect('/menu')
   } else {
-    res.render('users/register', {
+    res.render('blockchain/register', {
       title: 'RealDesignTech',
       session: session,
       user_name: user_name
@@ -122,6 +157,7 @@ router.get('/reg', function(req, res, next) {
 // /users/reg
 router.post('/reg', function(req, res) {
   name = req.body.username;
+  user_name = req.cookies.MY_USER;
   password = req.body.password;
 
   req_data = {
@@ -144,9 +180,10 @@ router.post('/reg', function(req, res) {
       } else {
         console.log("<--- log from : /reg");
         console.log(res_data.rmessage);
-        res.render('users/register', {
+        res.render('blockchain/register', {
           title: res_data.rmessage,
-          session: session
+          session: session,
+          user_name: user_name
         });
       }
     } else if (error) {
@@ -157,30 +194,37 @@ router.post('/reg', function(req, res) {
 })
 
 router.get('/unreg', function(req, res, next) {
+  user_name = req.cookies.MY_USER;
   session = req.session.logined;
   if (!session) {
-    res.redirect('/')
+    res.redirect('/menu')
   } else {
-    res.render('users/unregister', { title: 'RealDesignTech' });
+    res.render('blockchain/unregister', {
+      title: 'RealDesignTech',
+      session: session,
+      user_name: user_name
+    });
   }
 });
 
 // request to python server
-router.post('/unreg', function (req, res) {
+router.post('/unreg', function(req, res) {
+  user_name = req.cookies.MY_USER;
+  session = req.session.logined;
   name = req.body.username;
   password = req.body.password;
 
   req_data = {
-    'username' : name,
-    'password' : password
+    'username': name,
+    'password': password
   }
 
-  request.post(req_toBS.req_post('unreg/rest', req_data), function (error, response, body) {
+  request.post(req_toBS.req_post('unreg/rest', req_data), function(error, response, body) {
     // res_data in body (rcode,rmessage)
     res_data = JSON.parse(body);
 
-    if(!error && response.statusCode == 200) {
-      if(res_data.rcode == 'ok') {
+    if (!error && response.statusCode == 200) {
+      if (res_data.rcode == 'ok') {
         console.log("<--- log from : /unreg");
         console.log("unRegister Success");
 
@@ -190,11 +234,15 @@ router.post('/unreg', function (req, res) {
       } else {
         console.log("<--- log from : /unreg");
         console.log(res_data.rmessage);
-        res.render('users/unregister', {title: res_data.rmessage});
+        res.render('blockchain/unregister', {
+          title: res_data.rmessage,
+          session: session,
+          user_name: user_name
+        });
       }
     } else if (error) {
       console.log(error);
-      res.redirect('/unreg');
+      res.redirect('/users/unreg');
     }
   });
 })

@@ -7,12 +7,13 @@ var logger = require('morgan');
 
 // official site
 var indexRouter = require('./routes/index');
-var introRouter = require('./routes/intro')
-// function
-var menuRouter = require('./routes/menu');
-var usersRouter = require('./routes/users');
-var walletRouter = require('./routes/wallet');
+var introRouter = require('./routes/intro');
 var gameRouter = require('./routes/game');
+// function
+var menuRouter = require('./routes/blockchain/menu');
+var usersRouter = require('./routes/blockchain/users');
+var walletRouter = require('./routes/blockchain/wallet');
+
 
 var app = express();
 

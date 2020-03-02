@@ -2,18 +2,37 @@
 <html>
   <head>
     <title><%= title %></title>
-    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <% include ../common/head %>
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <button onclick="MovetoReg()">Register</button>
-    <button onclick="MovetoLogin()">Login</button>
-    <button onclick="Logout()">Logout</button>
-    <button onclick="MovetounReg()">unRegister</button>
-    <button onclick="MovetoWallet_Generate()">Wallet Generate</button>
-    <button onclick="MovetoWallet_Show()">Wallet Show</button>
-    <button onclick="game()">Game</button>
+  <body id="page-top">
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center text-center">
+          <div class="col-lg-10 align-self-end">
+            <h2 class="text-uppercase text-rdtblue font-weight-bold">Main Menu</h2>
+            <p class="text-rdtbody mb-3"><%= session%></p>
+            <p class="text-rdtbody mb-3"><%= user_name%></p>
+            <button class="btn btn-rdt btn-xl mb-5" onclick="users()">users</button>
+          </div>
+          <div class="col-lg-12 align-self-baseline">
+            <button class="btn btn-rdt btn-xl" onclick="MovetoReg()">Register</button>
+            <button class="btn btn-rdt btn-xl" onclick="MovetoLogin()">Login</button>
+            <button class="btn btn-rdt btn-xl" onclick="Logout()">Logout</button>
+            <button class="btn btn-rdt btn-xl" onclick="MovetounReg()">unRegister</button>
+            <button class="btn btn-rdt btn-xl" onclick="MovetoWallet_Generate()">Wallet Generate</button>
+            <button class="btn btn-rdt btn-xl" onclick="MovetoWallet_Show()">Wallet Show</button>
+            <button class="btn btn-rdt btn-xl" onclick="game()">Game</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <% include ../common/nav %>
+
+    <!-- Contact Section -->
+    <% include ../common/contact %>
+
+    <!-- Footer -->
+    <% include ../common/footer %>
   </body>
   <script>
     function MovetoReg() {
@@ -36,6 +55,9 @@
     }
     function game() {
       location.href="/game"
+    }
+    function users() {
+      location.href="/users"
     }
   </script>
 </html>
